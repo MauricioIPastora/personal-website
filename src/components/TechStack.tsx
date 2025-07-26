@@ -7,7 +7,7 @@ const technologies = [
   },
   {
     category: "Backend",
-    skills: ["Python", "PostgreSQL", "SQLite3"],
+    skills: ["Python", "PostgreSQL", "SQLite3", "Supabase"],
   },
   {
     category: "DevOps",
