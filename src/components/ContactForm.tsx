@@ -5,17 +5,30 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { submitContactForm } from "@/lib/actions";
 
 export default function ContactForm() {
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState("");
 
-  async function handleSubmit(formData: FormData) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     setPending(true);
+
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const messageText = formData.get("message");
+
     try {
-      const response = await submitContactForm(formData);
-      setMessage(response.message);
+      // Simulate form submission
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Here you would typically send to an API endpoint
+      // For now, we'll just simulate success
+      console.log("Form submission:", { name, email, message: messageText });
+
+      setMessage("Thanks for your message! I'll get back to you soon.");
+      e.currentTarget.reset();
     } catch (error) {
       setMessage("Something went wrong. Please try again.");
     } finally {
@@ -25,7 +38,7 @@ export default function ContactForm() {
 
   return (
     <Card className="p-6">
-      <form action={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
             Name
