@@ -145,7 +145,7 @@ export default function Page() {
               <CertificateCard
                 title="Responsive Web Design"
                 issuer="freeCodeCamp"
-                image="/freeCodeCamp.png"
+                image="/freeCodeCamp.PNG"
                 issueDate="2023-02-06"
                 expirationDate={null}
                 credentialLink="https://www.freecodecamp.org/certification/MauricioP/responsive-web-design"
