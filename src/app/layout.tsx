@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://mauriciopastora.com", // Replace with your actual domain
     images: [
       {
-        url: "/mauricio-pastora.png", // You can change this to any image in your public folder
+        url: "/Mauricio-Pastora.png", // You can change this to any image in your public folder
         width: 1200,
         height: 630,
         alt: "Mauricio Pastora",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Mauricio Pastora",
     description:
       "Full-stack developer portfolio showcasing projects, skills, and experience",
-    images: ["/mauricio-pastora.png"], // Same image for Twitter
+    images: ["/Mauricio-Pastora.png"], // Same image for Twitter
   },
   icons: {
     icon: "/foto - Edited.jpg", // This will be your favicon
