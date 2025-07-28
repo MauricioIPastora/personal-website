@@ -14,9 +14,11 @@ export default function ResumeModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Add cache busting parameter to ensure fresh content
+  const resumeUrl = "/Resume, Mauricio Ignacio Pastora, 2025.pdf";
+  const iframeUrl = `${resumeUrl}?t=${Date.now()}`;
+
   const handleDownload = () => {
-    // Replace with your actual resume PDF path
-    const resumeUrl = "/Resume, Mauricio Ignacio Pastora, 2025.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "Resume, Mauricio Ignacio Pastora, 2025.pdf";
@@ -26,8 +28,6 @@ export default function ResumeModal() {
   };
 
   const handleViewExternal = () => {
-    // Replace with your actual resume PDF path
-    const resumeUrl = "/Resume, Mauricio Ignacio Pastora, 2025.pdf";
     window.open(resumeUrl, "_blank");
   };
 
@@ -84,7 +84,7 @@ export default function ResumeModal() {
                 </div>
               )}
               <iframe
-                src="/Resume, Mauricio Ignacio Pastora, 2025.pdf"
+                src={iframeUrl}
                 className="w-full h-full"
                 title="Resume PDF"
                 onLoad={() => setIsLoading(false)}

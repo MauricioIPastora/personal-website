@@ -10,27 +10,45 @@ export default function ContactForm() {
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState("");
 
+  // Replace this URL with your actual API Gateway URL
+  const API_ENDPOINT =
+    "https://z9a3kiujui.execute-api.us-east-1.amazonaws.com/default/personal-website-contact-form-handler";
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setPending(true);
+    setMessage(""); // Clear any previous messages
 
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const messageText = formData.get("message");
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch(API_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+        }),
+      });
 
-      // Here you would typically send to an API endpoint
-      // For now, we'll just simulate success
-      console.log("Form submission:", { name, email, message: messageText });
+      console.log("Response status:", response.status);
+      console.log("Response ok:", response.ok);
 
-      setMessage("Thanks for your message! I'll get back to you soon.");
-      e.currentTarget.reset();
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Response data:", data);
+        setMessage(data.message);
+        form.reset();
+      } else {
+        setMessage("Something went wrong. Please try again.");
+      }
     } catch (error) {
-      setMessage("Something went wrong. Please try again.");
+      console.error("Fetch error:", error);
+      setMessage("Network error. Please check your connection and try again.");
     } finally {
       setPending(false);
     }
@@ -61,7 +79,13 @@ export default function ContactForm() {
           {pending ? "Sending..." : "Send Message"}
         </Button>
         {message && (
-          <p className="text-sm text-center mt-4 text-muted-foreground">
+          <p
+            className={`text-sm text-center mt-4 ${
+              message.includes("Thanks") || message.includes("success")
+                ? "text-green-600 dark:text-green-400"
+                : "text-red-600 dark:text-red-400"
+            }`}
+          >
             {message}
           </p>
         )}

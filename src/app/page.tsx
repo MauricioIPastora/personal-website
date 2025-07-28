@@ -33,6 +33,19 @@ export default function Page() {
               >
                 Projects
               </Link>
+
+              <Link
+                href="#tech-stack"
+                className="transition-colors hover:text-foreground/80"
+              >
+                Tech Stack
+              </Link>
+              <Link
+                href="#certifications"
+                className="transition-colors hover:text-foreground/80"
+              >
+                Certifications
+              </Link>
               <Link
                 href="#contact"
                 className="transition-colors hover:text-foreground/80"
@@ -111,7 +124,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="py-12 md:py-24 lg:py-32">
+        <section id="tech-stack" className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
               Tech Stack
@@ -120,7 +133,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="py-12 md:py-24 lg:py-32">
+        <section id="certifications" className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
               Certifications
