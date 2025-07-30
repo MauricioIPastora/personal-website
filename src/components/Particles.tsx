@@ -9,7 +9,7 @@ interface ParticlesProps {
 
 export default function Particles({ className = "" }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { theme, resolvedTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     if (!canvasRef.current) return;

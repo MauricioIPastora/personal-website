@@ -74,10 +74,11 @@ export default function Page() {
                   Professional developer portfolio featuring my projects,
                   technical skills, certifications, and professional experience.
                   Built with Next.js, TypeScript, and Tailwind CSS for optimal
-                  performance and user experience. The webpage you're seeing is
-                  deployed on AWS infrastructure utilizing S3 for static
-                  hosting, CloudFront for global content delivery, and a Lambda
-                  function, API Gateway, and SES for contact form functionality.
+                  performance and user experience. The webpage you&apos;re
+                  seeing is deployed on AWS infrastructure utilizing S3 for
+                  static hosting, CloudFront for global content delivery, and a
+                  Lambda function, API Gateway, and SES for contact form
+                  functionality.
                 </p>
               </div>
               <div className="space-x-4">
