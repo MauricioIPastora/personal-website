@@ -158,6 +158,43 @@ Security Features:
 All traffic runs over HTTPS with SSL certificates from AWS Certificate Manager. The RDS database is in a private subnet, and Security Groups restrict inbound access. CORS is configured on the Flask API to allow the frontend domain while blocking unauthorized origins. Cognito secures authentication and session management, while SQLAlchemy and input sanitization mitigate injection risks. Sensitive credentials are stored securely in AWS and GitHub Secrets.`}
               />
             </div>
+            <div className="space-y-12 mt-6">
+              <ProjectCard
+                title="Beltway Bits | Vinely.AI"
+                description="An AI-powered, community-driven platform for sharing and discussing the latest events and news regarding the tech scene in the Washington, D.C. area."
+                image="beltway.PNG"
+                link="https://github.com/Vinely-AI/vinely-feed"
+                link2="https://beltwaybits.vinely.ai/"
+                tags={[
+                  "React",
+                  "Cheerio",
+                  "AWS Bedrock",
+                  "S3 Bucket",
+                  "Lambda",
+                  "OpenAI",
+                  "Anthropic",
+                  "MCP Server",
+                  "Express",
+                  "RAG Application",
+                  "S3 Vector Bucket",
+                  "Bedrock Knowledge Base",
+                  "DynamoDB",
+                  "AWS Comprehend",
+                  "AWS Textract",
+                ]}
+                title2="Contributions to the project:"
+                architectureDescription={`R&D: 
+Research and Development of the platform included the implementation of different AWS services and tools to replace the current vectorization pipeline. This led me to develop an infrastructure that included the use of AWS Comprehend and textract for extraction of text, AWS Bedrock for chunking, AWS Titan V2 for vector embeddings, and DynamoDB for storing the metadata of the chunks to avoid revectorization of the same chunks.
+
+Features: 
+Built and implemented a scraper to extract the raw text content from a webpage.
+
+MCP Server: 
+Developed and tested several different MCP tools to assist in the development of the platform.
+
+`}
+              />
+            </div>
           </div>
         </section>
 

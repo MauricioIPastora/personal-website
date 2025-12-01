@@ -11,6 +11,7 @@ interface ProjectCardProps {
   link2?: string;
   tags: string[];
   architectureDescription?: string;
+  title2?: string;
 }
 
 export default function ProjectCard({
@@ -21,6 +22,7 @@ export default function ProjectCard({
   tags,
   link2,
   architectureDescription,
+  title2,
 }: ProjectCardProps) {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
@@ -74,7 +76,7 @@ export default function ProjectCard({
       {architectureDescription && (
         <div className="space-y-4">
           <h4 className="text-lg font-semibold text-foreground">
-            Project Architecture
+            {title2 || "Project Architecture"}
           </h4>
           <div className="prose prose-sm dark:prose-invert max-w-none">
             <div className="bg-muted/50 rounded-lg p-4 border">

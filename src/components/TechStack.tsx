@@ -17,6 +17,20 @@ const technologies = [
     category: "Tools",
     skills: ["VS Code", "GitHub", "Vite"],
   },
+  {
+    category: "AI",
+    skills: [
+      "OpenAI SDK",
+      "Anthropic SDK",
+      "Model Context Protocol (MCP)",
+      "Bedrock Knowledge Base",
+      "AWS Comprehend",
+      "AWS Textract",
+      "AWS Bedrock",
+      "AWS Titan V2",
+      "S3 Vector Bucket",
+    ],
+  },
 ];
 
 export default function TechStack() {
