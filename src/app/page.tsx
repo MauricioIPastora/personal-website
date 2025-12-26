@@ -182,7 +182,7 @@ All traffic runs over HTTPS with SSL certificates from AWS Certificate Manager. 
                   "AWS Comprehend",
                   "AWS Textract",
                 ]}
-                title2="Contributions to the project:"
+                title2="Contributions to the project"
                 architectureDescription={`R&D: 
 Research and Development of the platform included the implementation of different AWS services and tools to replace the current vectorization pipeline. This led me to develop an infrastructure that included the use of AWS Comprehend and textract for extraction of text, AWS Bedrock for chunking, AWS Titan V2 for vector embeddings, and DynamoDB for storing the metadata of the chunks to avoid revectorization of the same chunks.
 
