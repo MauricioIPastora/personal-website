@@ -4,31 +4,7 @@
 
 @layer base {
   :root {
-    /* Matrix Theme Light - Green background with black text */
-    --background: 142 72% 37%;
-    --foreground: 0 0% 0%;
-    --card: 142 60% 35%;
-    --card-foreground: 0 0% 0%;
-    --popover: 142 60% 35%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 142 70% 50%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 142 50% 18%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 142 40% 22%;
-    --muted-foreground: 0 0% 0%;
-    --accent: 142 70% 50%;
-    --accent-foreground: 0 0% 0%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 0%;
-    --border: 0 0% 0%;
-    --input: 142 50% 20%;
-    --ring: 0 0% 0%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    /* Matrix Theme Dark - Same as light for consistency */
+    /* Matrix Theme Dark - Black background with green text */
     --background: 0 0% 0%;
     --foreground: 142 69% 58%;
     --card: 0 0% 3%;
@@ -48,6 +24,7 @@
     --border: 142 30% 20%;
     --input: 0 0% 12%;
     --ring: 142 69% 45%;
+    --radius: 0.5rem;
   }
 }
 

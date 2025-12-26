@@ -4,7 +4,6 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
 import TechStack from "@/components/TechStack";
-import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import MatrixRain from "@/components/Matrix";
 import CertificateCard from "@/components/CertificateCard";
 import ResumeModal from "@/components/ResumeModal";
@@ -58,7 +57,6 @@ export default function Page() {
             </nav>
           </div>
           <div className="ml-auto flex items-center space-x-2">
-            <ThemeToggle />
             <ResumeModal />
           </div>
         </div>
