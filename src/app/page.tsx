@@ -25,32 +25,32 @@ export default function Page() {
             <nav className="flex items-center space-x-6 text-sm font-medium">
               <Link
                 href="#about"
-                className="transition-colors hover:text-foreground/80"
+                className="transition-colors hover:text-foreground/80 hover:border-b-2 hover:border-green-500"
               >
                 About
               </Link>
               <Link
                 href="#projects"
-                className="transition-colors hover:text-foreground/80"
+                className="transition-colors hover:text-foreground/80 hover:border-b-2 hover:border-green-500"
               >
                 Projects
               </Link>
 
               <Link
                 href="#tech-stack"
-                className="transition-colors hover:text-foreground/80"
+                className="transition-colors hover:text-foreground/80 hover:border-b-2 hover:border-green-500"
               >
                 Tech Stack
               </Link>
               <Link
                 href="#certifications"
-                className="transition-colors hover:text-foreground/80"
+                className="transition-colors hover:text-foreground/80 hover:border-b-2 hover:border-green-500"
               >
                 Certifications
               </Link>
               <Link
                 href="#contact"
-                className="transition-colors hover:text-foreground/80"
+                className="transition-colors hover:text-foreground/80 hover:border-b-2 hover:border-green-500"
               >
                 Contact
               </Link>
@@ -86,8 +86,12 @@ export default function Page() {
                   href="https://github.com/mauricioipastora"
                   target="_blank"
                 >
-                  <Button variant="outline" size="icon">
-                    <Github className="h-4 w-4 bg-transparent border-black text-black dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black" />
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="bg-transparent dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-black dark:hover:border-green-500"
+                  >
+                    <Github className="h-4 w-4" />
                     <span className="sr-only">GitHub</span>
                   </Button>
                 </Link>
@@ -95,14 +99,22 @@ export default function Page() {
                   href="https://www.linkedin.com/in/mauricio-pastora-044244186/"
                   target="_blank"
                 >
-                  <Button variant="outline" size="icon">
-                    <Linkedin className="h-4 w-4 bg-transparent border-black text-black dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black " />
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="bg-transparent dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-black dark:hover:border-green-500"
+                  >
+                    <Linkedin className="h-4 w-4" />
                     <span className="sr-only">LinkedIn</span>
                   </Button>
                 </Link>
                 <Link href="#contact">
-                  <Button variant="outline" size="icon">
-                    <Mail className="h-4 w-4 bg-transparent border-black text-black dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black" />
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="bg-transparent dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-black dark:hover:border-green-500"
+                  >
+                    <Mail className="h-4 w-4" />
                     <span className="sr-only">Email</span>
                   </Button>
                 </Link>

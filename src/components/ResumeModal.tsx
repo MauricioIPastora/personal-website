@@ -46,7 +46,7 @@ export default function ResumeModal() {
       <Button
         variant="outline"
         onClick={openModal}
-        className="bg-transparent border-black text-black dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black"
+        className="bg-transparent dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-black dark:hover:border-green-500"
       >
         Resume
       </Button>
@@ -62,7 +62,7 @@ export default function ResumeModal() {
                   variant="outline"
                   size="sm"
                   onClick={handleViewExternal}
-                  className="flex items-center gap-2 bg-transparent dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black"
+                  className="flex items-center gap-2 bg-transparent dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-black dark:hover:border-green-500"
                 >
                   <ExternalLink className="h-4 w-4" />
                   Open in New Tab
@@ -71,7 +71,7 @@ export default function ResumeModal() {
                   variant="outline"
                   size="sm"
                   onClick={handleDownload}
-                  className="flex items-center gap-2 bg-transparent dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black"
+                  className="flex items-center gap-2 bg-transparent dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-black dark:hover:border-green-500"
                 >
                   <Download className="h-4 w-4" />
                   Download PDF
