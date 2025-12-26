@@ -31,7 +31,7 @@ export default function CertificateCard({
 
   return (
     <Card className="overflow-hidden h-full flex flex-col bg-muted/50 backdrop-blur-sm">
-      <div className="relative aspect-[4/3] bg-gray-50 dark:bg-gray-800">
+      <div className="relative aspect-[4/3] ">
         <Image
           src={
             image || "/placeholder.svg?height=300&width=400&query=certificate"
