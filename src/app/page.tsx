@@ -14,7 +14,7 @@ export default function Page() {
       {/* Global Matrix Rain background */}
       <MatrixRain className="!fixed z-0" />
 
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 w-full border-b bg-muted/50 backdrop-blur-sm ">
         <div className="container flex h-14 items-center">
           <div className="mr-4 hidden md:flex">
             <Link className="mr-6 flex items-center space-x-2" href="/">
@@ -279,7 +279,7 @@ The integrated Pandio Chat component connects directly to OpenAI's GPT-3.5-turbo
         </section>
       </main>
 
-      <footer className="border-t relative z-10">
+      <footer className="border-t relative z-10 bg-muted/50 backdrop-blur-sm">
         <div className="container flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6">
           <p className="text-xs text-gray-500 dark:text-gray-400">
             © 2025 All rights reserved.

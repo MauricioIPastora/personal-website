@@ -30,7 +30,7 @@ export default function CertificateCard({
   };
 
   return (
-    <Card className="overflow-hidden h-full flex flex-col">
+    <Card className="overflow-hidden h-full flex flex-col bg-muted/50 backdrop-blur-sm">
       <div className="relative aspect-[4/3] bg-gray-50 dark:bg-gray-800">
         <Image
           src={
@@ -69,7 +69,10 @@ export default function CertificateCard({
 
       <CardFooter className="p-4 pt-0">
         <Link href={credentialLink} target="_blank" className="w-full">
-          <Button variant="outline" className="w-full bg-transparent">
+          <Button
+            variant="outline"
+            className="w-full bg-transparent text-black dark:text-green-500 dark:border-green-500"
+          >
             <ExternalLink className="h-4 w-4 mr-2" />
             Show Credential
           </Button>

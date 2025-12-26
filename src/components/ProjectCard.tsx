@@ -27,7 +27,7 @@ export default function ProjectCard({
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       {/* Project Card */}
-      <Card className="overflow-hidden self-start">
+      <Card className="overflow-hidden self-start bg-muted/50 backdrop-blur-sm">
         <div className="relative aspect-video">
           <Image
             src={image || "/placeholder.svg"}

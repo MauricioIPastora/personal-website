@@ -55,7 +55,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="p-6">
+    <Card className="p-6 bg-muted/50 backdrop-blur-sm">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">

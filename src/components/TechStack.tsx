@@ -37,7 +37,7 @@ export default function TechStack() {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {technologies.map((tech) => (
-        <Card key={tech.category} className="p-6">
+        <Card key={tech.category} className="p-6 bg-muted/50 backdrop-blur-sm">
           <h3 className="text-lg font-semibold mb-4">{tech.category}</h3>
           <div className="flex flex-wrap gap-2">
             {tech.skills.map((skill) => (
