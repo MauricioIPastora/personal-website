@@ -195,6 +195,33 @@ Developed and tested several different MCP tools to assist in the development of
 `}
               />
             </div>
+            <div className="space-y-12 mt-6">
+              <ProjectCard
+                title="Pandio.AI"
+                description="An AI-powered web browser currently in development"
+                image="pandiorepo.PNG"
+                link="https://github.com/MauricioIPastora/pandio-browser"
+                tags={[
+                  "Electron",
+                  "React",
+                  "TypeScript",
+                  "Vite",
+                  "TailwindCSS",
+                  "OpenAI",
+                  "GPT-3.5-turbo",
+                  "react-rnd",
+                ]}
+                architectureDescription={`Frontend Architecture:
+The renderer is built with React 19 and TypeScript, using Vite for fast HMR development builds. A component-based design leverages TailwindCSS for a dark-themed, responsive interface. State management uses React Hooks exclusively—including custom hooks like useChat and usePandioSidebar for encapsulated state logic. The layout features a collapsible sidebar (SidebarProvider context) and a resizable/draggable AI chat panel powered by react-rnd for flexible positioning.
+
+Browser Core:
+The webview-based browser engine provides full navigation controls (back, forward, refresh, home) with intelligent URL handling—automatically prefixing https:// for domain-like inputs or redirecting plain text to Google search. Navigation events are intercepted to keep the URL bar synchronized with the actual webview state.
+
+AI Chat Integration:
+The integrated Pandio Chat component connects directly to OpenAI's GPT-3.5-turbo API via the Chat Completions endpoint. API keys are securely managed through Vite environment variables. The chat supports two display modes: a fixed sidebar (300px width, docked right) and a floating modal (draggable, resizable, 300-800px). Conversation state is managed locally with React state, featuring loading indicators and auto-scroll to the latest message.
+`}
+              />
+            </div>
           </div>
         </section>
 
