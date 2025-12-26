@@ -62,7 +62,7 @@ export default function ResumeModal() {
                   variant="outline"
                   size="sm"
                   onClick={handleViewExternal}
-                  className="flex items-center gap-2 bg-transparent"
+                  className="flex items-center gap-2 bg-transparent dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black"
                 >
                   <ExternalLink className="h-4 w-4" />
                   Open in New Tab
@@ -71,7 +71,7 @@ export default function ResumeModal() {
                   variant="outline"
                   size="sm"
                   onClick={handleDownload}
-                  className="flex items-center gap-2 bg-transparent"
+                  className="flex items-center gap-2 bg-transparent dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black"
                 >
                   <Download className="h-4 w-4" />
                   Download PDF
