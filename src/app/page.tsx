@@ -100,7 +100,7 @@ export default function Page() {
                     <span className="sr-only">LinkedIn</span>
                   </Button>
                 </Link>
-                <Link href="mailto:mauriciopastora@gmail.com">
+                <Link href="#contact">
                   <Button variant="outline" size="icon">
                     <Mail className="h-4 w-4" />
                     <span className="sr-only">Email</span>
