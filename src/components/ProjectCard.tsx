@@ -43,7 +43,7 @@ export default function ProjectCard({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center rounded-md bg-muted px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10"
+                className="inline-flex items-center rounded-md bg-accent px-2 py-1 text-xs font-medium text-accent-foreground ring-1 ring-inset ring-border"
               >
                 {tag}
               </span>
@@ -79,7 +79,7 @@ export default function ProjectCard({
             {title2 || "Project Architecture"}
           </h4>
           <div className="prose prose-sm dark:prose-invert max-w-none">
-            <div className="bg-muted/50 rounded-lg p-4 border">
+            <div className="bg-muted/50 rounded-lg p-4 border backdrop-blur-sm">
               <div className="whitespace-pre-wrap text-sm leading-relaxed">
                 {architectureDescription}
               </div>

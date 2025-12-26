@@ -5,13 +5,16 @@ import ContactForm from "@/components/ContactForm";
 import ProjectCard from "@/components/ProjectCard";
 import TechStack from "@/components/TechStack";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
-import Particles from "@/components/Particles";
+import MatrixRain from "@/components/Matrix";
 import CertificateCard from "@/components/CertificateCard";
 import ResumeModal from "@/components/ResumeModal";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      {/* Global Matrix Rain background */}
+      <MatrixRain className="!fixed z-0" />
+
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center">
           <div className="mr-4 hidden md:flex">
@@ -61,10 +64,9 @@ export default function Page() {
         </div>
       </header>
 
-      <main className="container px-4 md:px-6">
+      <main className="container px-4 md:px-6 relative z-10">
         <section id="about" className="py-12 md:py-24 lg:py-32">
-          <Particles />
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 border- rounded-md border-green-500 p-4 backdrop-blur-sm shadow-md w-[70%] mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -87,7 +89,7 @@ export default function Page() {
                   target="_blank"
                 >
                   <Button variant="outline" size="icon">
-                    <Github className="h-4 w-4" />
+                    <Github className="h-4 w-4 bg-transparent border-black text-black dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black" />
                     <span className="sr-only">GitHub</span>
                   </Button>
                 </Link>
@@ -96,13 +98,13 @@ export default function Page() {
                   target="_blank"
                 >
                   <Button variant="outline" size="icon">
-                    <Linkedin className="h-4 w-4" />
+                    <Linkedin className="h-4 w-4 bg-transparent border-black text-black dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black " />
                     <span className="sr-only">LinkedIn</span>
                   </Button>
                 </Link>
                 <Link href="#contact">
                   <Button variant="outline" size="icon">
-                    <Mail className="h-4 w-4" />
+                    <Mail className="h-4 w-4 bg-transparent border-black text-black dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black" />
                     <span className="sr-only">Email</span>
                   </Button>
                 </Link>
@@ -112,7 +114,6 @@ export default function Page() {
         </section>
 
         <section id="projects" className="py-12 md:py-24 lg:py-32">
-          <Particles />
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
               Projects
@@ -280,7 +281,7 @@ The integrated Pandio Chat component connects directly to OpenAI's GPT-3.5-turbo
         </section>
       </main>
 
-      <footer className="border-t">
+      <footer className="border-t relative z-10">
         <div className="container flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6">
           <p className="text-xs text-gray-500 dark:text-gray-400">
             © 2025 All rights reserved.

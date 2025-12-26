@@ -43,7 +43,11 @@ export default function ResumeModal() {
   return (
     <>
       {/* Resume Button */}
-      <Button variant="outline" onClick={openModal}>
+      <Button
+        variant="outline"
+        onClick={openModal}
+        className="bg-transparent border-black text-black dark:border-green-500 dark:text-green-500 hover:bg-green-500 hover:text-black hover:border-green-500 dark:hover:border-black"
+      >
         Resume
       </Button>
 
