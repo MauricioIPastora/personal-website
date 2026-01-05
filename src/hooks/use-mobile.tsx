@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react"
 
 export function useMobile() {
-  const [isMobile, setIsMobile] = useState(false)
+  // Default to true to prevent flash of desktop nav on mobile during SSR
+  const [isMobile, setIsMobile] = useState(true)
 
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768)
+      // Increased breakpoint to 1024px to accommodate the full nav width
+      setIsMobile(window.innerWidth < 1024)
     }
 
     // Initial check

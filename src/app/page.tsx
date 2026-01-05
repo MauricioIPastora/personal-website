@@ -23,7 +23,7 @@ export default function Page() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Matrix Rain Background */}
-        <MatrixRain className="z-0" />
+        {/* <MatrixRain className="z-0" /> */}
 
         {/* Animated background blobs */}
         <div className="absolute inset-0 z-[1]">
