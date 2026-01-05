@@ -45,9 +45,11 @@ export function FloatingNav() {
   return (
     <>
       <motion.div
-        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 max-w-[calc(100vw-2rem)] ${
-          isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed top-6 z-50 ${
+          isMobile
+            ? "inset-x-0 flex justify-center px-4"
+            : "left-1/2 -translate-x-1/2 max-w-[calc(100vw-2rem)]"
+        } ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         initial={{ y: -100 }}
         animate={{ y: isVisible ? 0 : -100 }}
         transition={{ duration: 0.3 }}
@@ -56,7 +58,7 @@ export function FloatingNav() {
           <div className="absolute -inset-0.5 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur opacity-50"></div>
 
           {isMobile ? (
-            <div className="relative flex items-center justify-between min-w-[200px]">
+            <div className="relative flex items-center justify-between gap-8">
               <Link href="/" className="font-bold text-lg">
                 <span className="text-gradient-green">Mauricio</span>
                 <span className="text-white">P</span>
