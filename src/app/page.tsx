@@ -320,7 +320,7 @@ export default function Page() {
                   via SQLAlchemy. It follows clean REST principles, returning
                   JSON responses with proper status codes. Authentication relies
                   on Cognito-issued JWT tokens, reducing the need for custom
-                  auth logic. SQLAlchemy's parameterized queries and input
+                  auth logic. SQLAlchemy&apos;s parameterized queries and input
                   normalization protect against SQL injection, while the modular
                   design simplifies database interactions and scaling.
                   <br />
@@ -435,10 +435,10 @@ export default function Page() {
                   <b>AI Chat Integration:</b>
                   <br />
                   The integrated Pandio Chat component connects directly to
-                  OpenAI's GPT-3.5-turbo API via the Chat Completions endpoint.
-                  API keys are securely managed through Vite environment
-                  variables. The chat supports two display modes: a fixed
-                  sidebar (300px width, docked right) and a floating modal
+                  OpenAI&apos;s GPT-3.5-turbo API via the Chat Completions
+                  endpoint. API keys are securely managed through Vite
+                  environment variables. The chat supports two display modes: a
+                  fixed sidebar (300px width, docked right) and a floating modal
                   (draggable, resizable, 300-800px). Conversation state is
                   managed locally with React state, featuring loading indicators
                   and auto-scroll to the latest message.
