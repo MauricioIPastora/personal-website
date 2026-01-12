@@ -15,13 +15,13 @@ export default function ResumeModal() {
   const [isLoading, setIsLoading] = useState(true);
 
   // Add cache busting parameter to ensure fresh content
-  const resumeUrl = "/Resume, Mauricio Ignacio Pastora, 2025.pdf";
+  const resumeUrl = "/Resume, Mauricio Ignacio Pastora, 2026.pdf";
   const iframeUrl = `${resumeUrl}?t=${Date.now()}`;
 
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "/Resume, Mauricio Ignacio Pastora, 2025.pdf";
+    link.download = "/Resume, Mauricio Ignacio Pastora, 2026.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
