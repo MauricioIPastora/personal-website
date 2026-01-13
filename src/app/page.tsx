@@ -12,6 +12,7 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 import { SectionHeading } from "@/components/SectionHeading";
 import { GlassmorphicCard } from "@/components/GlassmorphicCard";
 import { Timeline } from "@/components/Timeline";
+import { Chatbot } from "@/components/Chatbot";
 import Image from "next/image";
 
 export default function Page() {
@@ -661,6 +662,9 @@ export default function Page() {
           </div>
         </div>
       </footer>
+
+      {/* AI Chatbot */}
+      <Chatbot />
     </div>
   );
 }
