@@ -21,7 +21,7 @@ interface ChatbotProps {
 }
 
 export function Chatbot({
-  apiEndpoint = "/api/chat",
+  apiEndpoint = process.env.NEXT_PUBLIC_CHATBOT_API || "/api/chat",
   initialMessage = "Hi! I'm Mauricio's AI assistant. Ask me anything about his skills, projects, or experience!",
 }: ChatbotProps) {
   const [isOpen, setIsOpen] = useState(false);
