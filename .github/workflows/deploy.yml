@@ -28,6 +28,8 @@ jobs:
 
       - name: Build application
         run: npm run build
+        env:
+          NEXT_PUBLIC_CHATBOT_API: ${{ secrets.CHATBOT_API_ENDPOINT }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
