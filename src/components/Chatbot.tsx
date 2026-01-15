@@ -22,7 +22,7 @@ interface ChatbotProps {
 
 export function Chatbot({
   apiEndpoint = process.env.NEXT_PUBLIC_CHATBOT_API || "/api/chat",
-  initialMessage = "Hi! I'm Mauricio's AI assistant. Ask me anything about his skills, projects, or experience!",
+  initialMessage = "Hi! I'm Mauricio's AI. Ask me anything about my skills, projects, or experience!",
 }: ChatbotProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
@@ -77,6 +77,77 @@ export function Chatbot({
 
   const generateId = () => Math.random().toString(36).substring(2, 9);
 
+  const presetQuestions = [
+    "What programming languages do you know?",
+    "Where have you worked?",
+    "What is your experience with AI?",
+  ];
+
+  const handlePresetClick = (question: string) => {
+    setInputValue(question);
+    // Use setTimeout to ensure state is updated before sending
+    setTimeout(() => {
+      sendMessageWithContent(question);
+    }, 0);
+  };
+
+  const sendMessageWithContent = async (content: string) => {
+    if (!content.trim() || isLoading) return;
+
+    const userMessage: Message = {
+      id: generateId(),
+      role: "user",
+      content: content.trim(),
+      timestamp: new Date(),
+    };
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInputValue("");
+    setIsLoading(true);
+
+    try {
+      const response = await fetch(apiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages: [...messages, userMessage].map((m) => ({
+            role: m.role,
+            content: m.content,
+          })),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to get response");
+      }
+
+      const data = await response.json();
+
+      const assistantMessage: Message = {
+        id: generateId(),
+        role: "assistant",
+        content: data.message || data.content || "I received your message!",
+        timestamp: new Date(),
+      };
+
+      setMessages((prev) => [...prev, assistantMessage]);
+    } catch (error) {
+      console.error("Chat error:", error);
+      const fallbackMessage: Message = {
+        id: generateId(),
+        role: "assistant",
+        content:
+          "I'm currently being set up! Once connected to the knowledge base, I'll be able to answer questions about Mauricio's experience, projects, and skills.",
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, fallbackMessage]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const sendMessage = async () => {
     if (!inputValue.trim() || isLoading) return;
 
@@ -92,7 +163,6 @@ export function Chatbot({
     setIsLoading(true);
 
     try {
-      // TODO: Replace with actual AWS Bedrock API call
       const response = await fetch(apiEndpoint, {
         method: "POST",
         headers: {
@@ -246,14 +316,14 @@ export function Chatbot({
 
             {/* Messages */}
             <div className="relative flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-green-500/30 scrollbar-track-transparent">
-              {messages.map((message) => (
+              {messages.map((message, index) => (
                 <motion.div
                   key={message.id}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
-                  className={`flex ${
-                    message.role === "user" ? "justify-end" : "justify-start"
+                  className={`flex flex-col ${
+                    message.role === "user" ? "items-end" : "items-start"
                   }`}
                 >
                   <div
@@ -265,6 +335,31 @@ export function Chatbot({
                   >
                     <p className="text-sm leading-relaxed">{message.content}</p>
                   </div>
+
+                  {/* Preset questions - show after initial message only */}
+                  {index === 0 &&
+                    message.role === "assistant" &&
+                    messages.length === 1 &&
+                    !isLoading && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="flex flex-wrap gap-2 mt-3 max-w-full justify-end w-full"
+                      >
+                        {presetQuestions.map((question, qIndex) => (
+                          <motion.button
+                            key={qIndex}
+                            onClick={() => handlePresetClick(question)}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="text-xs px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 hover:bg-green-500/20 hover:border-green-500/50 transition-all duration-200 cursor-pointer"
+                          >
+                            {question}
+                          </motion.button>
+                        ))}
+                      </motion.div>
+                    )}
                 </motion.div>
               ))}
 
@@ -310,7 +405,7 @@ export function Chatbot({
                 </Button>
               </div>
               <p className="text-center text-zinc-600 text-xs mt-2">
-                Powered by AWS Bedrock
+                Powered by AWS Bedrock, Lambda, and API Gateway
               </p>
             </div>
           </motion.div>
