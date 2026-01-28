@@ -347,7 +347,7 @@ export default function Page() {
             />
 
             <ProjectCard
-              title="Beltway Bits | Vinely.AI"
+              title="Vinely.AI"
               description="An AI-powered, community-driven platform for sharing and discussing the latest events and news regarding the tech scene in the Washington, D.C. area."
               image="beltway.PNG"
               link="https://github.com/Vinely-AI/vinely-feed"
@@ -397,10 +397,11 @@ export default function Page() {
             />
 
             <ProjectCard
-              title="Pandio.AI"
+              title="Surph.AI"
               description="An AI-powered web browser currently in development"
-              image="pandiorepo.PNG"
-              link="https://github.com/MauricioIPastora/pandio-browser"
+              image="surph-ai-app-preview.PNG"
+              link="https://github.com/Vertex-Labs/surph-ai-desktop.git"
+              link2="https://landing.surph.ai"
               tags={[
                 "Electron",
                 "React",
@@ -419,7 +420,7 @@ export default function Page() {
                   for fast HMR development builds. A component-based design
                   leverages TailwindCSS for a dark-themed, responsive interface.
                   State management uses React Hooks exclusively—including custom
-                  hooks like useChat and usePandioSidebar for encapsulated state
+                  hooks like useChat and useSurphSidebar for encapsulated state
                   logic. The layout features a collapsible sidebar
                   (SidebarProvider context) and a resizable/draggable AI chat
                   panel powered by react-rnd for flexible positioning.
@@ -435,7 +436,7 @@ export default function Page() {
                   <br />
                   <b>AI Chat Integration:</b>
                   <br />
-                  The integrated Pandio Chat component connects directly to
+                  The integrated Surph Chat component connects directly to
                   OpenAI&apos;s GPT-3.5-turbo API via the Chat Completions
                   endpoint. API keys are securely managed through Vite
                   environment variables. The chat supports two display modes: a
