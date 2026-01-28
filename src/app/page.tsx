@@ -399,7 +399,7 @@ export default function Page() {
             <ProjectCard
               title="Surph.AI"
               description="An AI-powered web browser currently in development"
-              image="surph-ai-app-preview.PNG"
+              image="\surph-ai-app-preview.png"
               link="https://github.com/Vertex-Labs/surph-ai-desktop.git"
               link2="https://landing.surph.ai"
               tags={[
