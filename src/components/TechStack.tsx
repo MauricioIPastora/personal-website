@@ -6,11 +6,11 @@ import { GlassmorphicCard } from "./GlassmorphicCard"
 const technologies = [
   {
     category: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "TailwindCSS", "Electron"],
+    skills: ["React", "Next.js", "TypeScript", "TailwindCSS", "Electron", "Vite"],
   },
   {
     category: "Backend",
-    skills: ["Python", "PostgreSQL", "SQLite3", "Supabase", "Electron"],
+    skills: ["Python", "PostgreSQL", "SQLite3", "Supabase", "Electron", "Java", "Node.js", "Flask"],
   },
   {
     category: "DevOps",
@@ -18,7 +18,7 @@ const technologies = [
   },
   {
     category: "Tools",
-    skills: ["VS Code", "GitHub", "Vite"],
+    skills: ["VS Code", "GitHub"],
   },
   {
     category: "AI",
