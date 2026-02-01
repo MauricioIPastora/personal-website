@@ -9,11 +9,12 @@ const experiences = [
     company: "Vertex Labs",
     period: "February 2025 - Present",
     bullets: [
-      "Applied algorithmic optimization and efficient data structure design using AWS Lambda, DynamoDB, and vector databases to eliminate redundant embeddings and reprocessing, reducing storage costs by 50% and improving retrieval performance.",
-      "Developed client-facing AI tools that synchronize frontend queries with MCP servers and vector databases, implementing structured data parsing and comparison logic to deliver accurate, low-latency user interactions.",
-      "Built and deployed multiple MCP tools integrated into the Vinely.ai platform, enabling modular, reusable AI capabilities across workflows.",
-      "Integrated advanced features including web scraping pipelines and secure third-party API authentication, enhancing platform functionality and data ingestion reliability.",
-      "Collaborated within an agile engineering team, participating in code reviews, debugging, automated testing, and iterative feature delivery to maintain production quality standards.",
+      "Designed and implemented MCP servers and tools powering modular AI capabilities across the Vinely.AI platform.",
+      "Leveraging Electron.js, React, Vite, TypeScript, TailwindCSS, OpenAI, GPT-3.5-turbo, and react-rnd, to develop an AI powered browser called Surph.AI with ability to integrate MCP tools as company product.",
+      "Leading the migration of a client’s full AWS infrastructure between accounts, replicating services, transferring data and permissions, and validating deployments to ensure security, continuity, and minimal downtime.",
+      "Developed RAG pipelines backed by vector databases, applying embedding deduplication and retrieval optimizations that reduced storage costs by 50% and improved response quality.",
+      "Integrated third-party APIs and web-scraping pipelines with secure authentication, supporting scalable data ingestion for AI systems.",
+      "Collaborated in an agile SDLC with frequent deployments, automated tests, code reviews, and production debugging in a containerized runtime.",
     ],
   },
   {
@@ -29,12 +30,11 @@ const experiences = [
   },
   {
     title: "Software Engineer",
-    company: "Arborea",
+    company: "Arboria",
     period: "June 2025 - Present",
     bullets: [
-      "Leading the ongoing implementation of full-stack features, including building dynamic Next.js pages and components (e.g., a responsive map interface using the Google Maps API), secure authentication, and user profile management, and designing scalable SQL/DDL schemas to ship production enhancements on rapid release cycles.",
-      "Engaging in ongoing client meetings to define and prioritize MVP features, actively translating non-technical business needs into actionable technical deliverables, maintaining rapid feature implementation.",
-      "Collaborating with a development team for version control, code reviews, and seamless integration of contributions.",
+      "Architecting AWS cloud infrastructure using Terraform to deploy containerized microservices on ECS Fargate, writing Dockerfiles and managing container registries (ECR), implementing CI/CD pipelines with GitHub Actions, and configuring VPC network policies, security groups, and auto-scaling compute resources (CPU/memory-based scaling) with bash scripting for automation.",
+      "Leading the implementation of full-stack features for a logistics management application, including building dynamic Next.js pages and components (e.g., a responsive map interface using the Google Maps API), secureauthentication, user profile management, and designing scalable PostgreSQL schemas to ship production enhancements on rapid release cycles.",
     ],
   },
   {
