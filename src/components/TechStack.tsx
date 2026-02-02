@@ -30,7 +30,7 @@ const technologies = [
   },
   {
     category: "DevOps",
-    skills: ["AWS", "CI/CD", "Git", "Nginx", "Github Actions"],
+    skills: ["AWS", "CI/CD", "Git", "Nginx", "Github Actions", "Terraform"],
   },
   {
     category: "Tools",
