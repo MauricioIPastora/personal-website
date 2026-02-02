@@ -1,20 +1,36 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { GlassmorphicCard } from "./GlassmorphicCard"
+import { motion } from "framer-motion";
+import { GlassmorphicCard } from "./GlassmorphicCard";
 
 const technologies = [
   {
     category: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "TailwindCSS", "Electron", "Vite"],
+    skills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Electron",
+      "Vite",
+    ],
   },
   {
     category: "Backend",
-    skills: ["Python", "PostgreSQL", "SQLite3", "Supabase", "Electron", "Java", "Node.js", "Flask"],
+    skills: [
+      "Python",
+      "PostgreSQL",
+      "SQLite3",
+      "Supabase",
+      "Electron",
+      "Java",
+      "Node.js",
+      "Flask",
+    ],
   },
   {
     category: "DevOps",
-    skills: ["AWS", "CI/CD", "Git", "Nginx"],
+    skills: ["AWS", "CI/CD", "Git", "Nginx", "Github Actions"],
   },
   {
     category: "Tools",
@@ -34,7 +50,7 @@ const technologies = [
       "S3 Vector Bucket",
     ],
   },
-]
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -44,16 +60,16 @@ const containerVariants = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
-}
+};
 
 export default function TechStack() {
   return (
-    <motion.div 
+    <motion.div
       className="grid gap-6 md:grid-cols-2"
       variants={containerVariants}
       initial="hidden"
@@ -63,7 +79,9 @@ export default function TechStack() {
       {technologies.map((tech, index) => (
         <motion.div key={tech.category} variants={itemVariants}>
           <GlassmorphicCard>
-            <h3 className="text-lg font-semibold mb-4 text-green-400">{tech.category}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-green-400">
+              {tech.category}
+            </h3>
             <div className="flex flex-wrap gap-2">
               {tech.skills.map((skill, skillIndex) => (
                 <motion.span
@@ -83,5 +101,5 @@ export default function TechStack() {
         </motion.div>
       ))}
     </motion.div>
-  )
+  );
 }
