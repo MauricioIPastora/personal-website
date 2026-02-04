@@ -30,11 +30,20 @@ const technologies = [
   },
   {
     category: "DevOps",
-    skills: ["AWS", "CI/CD", "Git", "Nginx", "Github Actions", "Terraform"],
+    skills: [
+      "AWS",
+      "CI/CD",
+      "Git",
+      "Nginx",
+      "Github Actions",
+      "Terraform",
+      "Docker",
+      "Tailscale",
+    ],
   },
   {
     category: "Tools",
-    skills: ["VS Code", "GitHub"],
+    skills: ["VS Code", "GitHub", "Cursor"],
   },
   {
     category: "AI",
