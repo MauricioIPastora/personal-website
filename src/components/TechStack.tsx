@@ -37,6 +37,7 @@ const technologies = [
       "Nginx",
       "Github Actions",
       "Terraform",
+      "Pulumi",
       "Docker",
       "Tailscale",
     ],
