@@ -19,6 +19,7 @@ const technologies = [
     category: "Backend",
     skills: [
       "Python",
+      "Go",
       "PostgreSQL",
       "SQLite3",
       "Supabase",
