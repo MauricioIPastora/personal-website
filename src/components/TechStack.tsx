@@ -24,7 +24,6 @@ const technologies = [
       "SQLite3",
       "Supabase",
       "Electron",
-      "Java",
       "Node.js",
       "Flask",
     ],
