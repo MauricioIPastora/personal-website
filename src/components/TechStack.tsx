@@ -10,6 +10,7 @@ const technologies = [
       "React",
       "Next.js",
       "TypeScript",
+      "JavaScript",
       "TailwindCSS",
       "Electron",
       "Vite",
