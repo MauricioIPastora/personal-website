@@ -86,7 +86,7 @@ export function FloatingNav() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-1 text-sm font-medium text-zinc-400 hover:text-green-400 transition-colors"
+                  className="px-1 py-1 text-sm font-medium text-zinc-400 hover:text-green-400 transition-colors whitespace-nowrap"
                   onClick={handleNavClick}
                 >
                   {item.name}
